@@ -1,4 +1,5 @@
-const fs=require('fs');
+const url = require('url');
+const { getVendorsFullData } = require('../utills/getVendorsData');
 
 const getIndex =  async (req, res) => {
     res.sendHtmlFile('../public/orderform.html');
@@ -8,32 +9,29 @@ const getPublicFile =  async (req, res) => {
     res.sendFile('../public' + req.url);
 }
 
-const getVendors =  async (req, res) => {
-    fs.readdir(__dirname + '/../vendors', null, async (err, files) => {
-        const data = []
-        const promises = []
-        for (let i in files) {
-            promises.push(new Promise(resolve => {
-                    fs.readFile(__dirname + '/../vendors/' + files[i], 'utf8', (err, fileData) => {
-                        if (err) {
-                            console.error(err);
-                            return;
-                        }
-                        data.push(JSON.parse(fileData))
-                        resolve()
-                    });
-            }))
-        }
 
-        Promise.all(promises)
-        .then(() => {
-            res.send(data)
-        })
-    });
+
+const getVendors =  async (req, res) => {
+    const data = await getVendorsFullData()
+
+    const query = url.parse(req.url,true).query
+
+    if (query.id) {
+        const foundVendor = data.find(el => el.id === parseInt(query.id))
+        res.send(foundVendor)
+    }
+    else {
+        for (let i in data) {
+            delete data[i].supplies
+        }
+        res.send(data)
+    }
 }
+
+
 
 module.exports = {
     getIndex,
     getPublicFile,
-    getVendors
+    getVendors,
 }

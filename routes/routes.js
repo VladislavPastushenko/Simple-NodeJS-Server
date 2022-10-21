@@ -13,4 +13,5 @@ for (let i=0; i < publicFiles.length; i++) {
 
 router.get('/vendors', controller.getVendors)
 
+
 module.exports = router
