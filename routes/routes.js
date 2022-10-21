@@ -3,12 +3,12 @@
 const Router = require('../functionality/router');
 const controller = require('../controller/controller');
 const router = new Router()
+const publicFiles = require('../routes/publicFiles')
 
+router.get('/', controller.getIndex)
 
-
-router.get('/index', controller.getIndex)
-router.get('/test', controller.getIndex)
-
-router.post('/', controller.create)
+for (let i=0; i < publicFiles.length; i++) {
+    router.get(`/${publicFiles[i]}`, controller.getPublicFile)
+}
 
 module.exports = router
