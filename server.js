@@ -1,6 +1,6 @@
 const PORT = process.env.PORT || 3000;
 const Application = require('./functionality/ser');
-const router = require('./router/router');
+const router = require('./routes/routes');
 const jsonParser = require('./functionality/parseJson');
 const parseUrl = require('./functionality/parseUrl');
 
