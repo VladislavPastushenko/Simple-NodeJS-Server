@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Add item</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="addItem.css">
+	</head>
+
+	<body>
+        <nav id="topnav">
+			<a class="nav-link" href="/">Homepage</a>
+			<a class="nav-link" href="/orderform.html">Order form</a>
+			<a class="nav-link" href="/addItem.html">Add item</a>
+			<a class="nav-link" href="/vendor-statistics.html">Vendor statistics</a>
+		 </nav>
+
+        <h2>
+            Add item
+        </h2>
+        <form action="return">
+            <div class="formItemContainer">
+                <label for="vendor-select"> Select a vendor </label>
+		        <select id="vendor-select" name="vendorId" class="formItem"></select>
+            </div>
+            <div class="formItemContainer">
+                <label for="category-select"> Select a category </label>
+                <select id="category-select" name="category" class="formItem"></select>
+            </div>
+            <div class="formItemContainer">
+                <label for="name-input"> Enter a name of item </label>
+                <input type="text" id="name-input" name="name" placeholder="Enter name" class="formItem">
+            </div>
+            <div class="formItemContainer">
+                <label for="description-input"> Enter a description of item </label>
+                <input type="text" id="description-input" name="description" placeholder="Enter description" class="formItem">
+            </div>
+            <div class="formItemContainer">
+                <label for="price-input"> Enter a price of item </label>
+                <input type='number' id="price-input" name="price" placeholder="Enter price" class="formItem">
+            </div>
+            <div class="formItemContainer">
+                <label for="stock-input"> Enter a stock of item </label>
+                <input type='number' id="stock-input" name="stock" placeholder="Enter stock" class="formItem">
+            </div>
+            <div class="formItemContainer">
+                <button type="button" id="submit-button"> Submit </button>
+            </div>
+        </form>
+
+		<script src="addItem.js"></script>
+	</body>
+
+</html>

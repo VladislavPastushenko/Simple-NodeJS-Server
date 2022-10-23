@@ -13,5 +13,11 @@ for (let i=0; i < publicFiles.length; i++) {
 
 router.get('/vendors', controller.getVendors)
 
+router.post('/place-order', controller.placeOrder)
+
+router.post('/place-item', controller.placeItem)
+
+router.get('/orders', controller.ordersData)
+
 
 module.exports = router

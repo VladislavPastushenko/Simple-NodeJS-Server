@@ -1,34 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 body {
-    padding-left: 10px;
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-select {
-    position: absolute;
-    left: 70%;
-    font-size: x-large;    
+#topnav {
+    position: fixed;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-color: Black;
+
+    z-index: 9999;
+
+    font-size: 15px;
 }
 
-.column {
-    float: left;
-}
 
-.left {
-    width: 25%;
-}
+.nav-link {
+    display: inline-block;
+    width: 130px;
+    height: 55px;
 
-.middle {
-    width: 40%;
-}
+    color: White;
 
-.right {
-    width: 29%;
-}
+    /* centering text */
+    text-align: center;    /* horizontally */
+    line-height: 55px;     /* vertically */
 
-button {
-    width: 140px;
-    padding: 15px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer; 
+    text-decoration: none;
  }

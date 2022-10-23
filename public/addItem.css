@@ -1,0 +1,24 @@
+.formItemContainer {
+    margin: 1.5em 0;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.formItem {
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: .2em .5em;
+}
+
+button {
+    background-color: black;
+    font-size: 20px;
+    border: 0;
+    border-radius: 9px;
+    padding: .4em .5em;
+    color: white;
+}
