@@ -8,8 +8,6 @@ node server.js
 
 ## Description
 
-Use the node to run a server
-
 A simple, ExpressJS-like server.
 
 ## Content
